@@ -8,12 +8,12 @@ func Play(b Board, b2 *Board) {
 
 	for {
 
-		if b.points() >= 3 {
+		if b.points() >= 100 {
 			fmt.Print("You win!")
 			break
 		}
 
-		b.showBoard()
+		b.showBoard(uI)
 
 		fmt.Println("Select the coordinate")
 		fmt.Scanf("%d", &uI)

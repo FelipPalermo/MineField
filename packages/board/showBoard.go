@@ -2,12 +2,12 @@ package board
 
 import "fmt"
 
-func (b Board) showBoard() {
+func (b Board) showBoard(uI int) {
 
 	fmt.Println()
 	for _, sp := range b.Place {
 		if sp.sel == true {
-			fmt.Print("X  ")
+			fmt.Print(b.closeBombs(uI), "  ")
 		} else {
 			fmt.Print("O  ")
 		}
